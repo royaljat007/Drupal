@@ -1,0 +1,12 @@
+custom_theme.group.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+custom_theme.group.medium:
+  label: medium
+  mediaQuery: '(min-width: 700px)'
+  weight: 10
+custom_theme.group.large:
+  label: large
+  mediaQuery: '(min-width: 1025px)'
+  weight: 15

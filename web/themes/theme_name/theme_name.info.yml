@@ -1,0 +1,27 @@
+type: theme
+name: theme_name
+description: Custom theme.
+logo: 'assets/logo/logo.png'
+
+core_version_requirement: ">=8"
+base theme: classy
+
+libraries:
+  - theme_name/main
+
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/themes/classy/css/components/form.css
+  - core/themes/classy/css/components/inline-form.css
+  - core/themes/stable/css/system/components/container-inline.module.css
+  - core/themes/stable/css/filter/filter.caption.css
+
+regions:
+  header: "Header"
+  help: "Help"
+  content_top: "Content top"
+  content: "Content"
+  content_bottom: "Content bottom"
+  footer: "Footer"
+  hidden: "Hidden (not output)"

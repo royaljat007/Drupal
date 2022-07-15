@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-montserrat;
+  color: $color-gray;
+}
+
+a {
+  color: $color-gray;
+  transition: all .2s ease;
+  text-decoration: none;
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.block-quicktabs-blockconferences {
+  max-width: 1200px;
+  margin: auto;
+}

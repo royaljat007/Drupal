@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Override {module_contrib_dir}/paragraphs/templates/paragraph.html.twig
+ *
+ * @see template_preprocess_paragraph()
+ */
+#}
+
+{% set classes = [
+  'tabs',
+  'paragraph',
+] %}
+
+{{ attach_library('theme_name/tabs') }}
+
+{% block paragraph %}
+
+  <div{{ attributes.addClass(classes) }}>
+
+    {% block content %}
+
+      {% if content.field_tabs_heading.0 %}
+        <h2 class="tabs__header">
+          {{ content.field_tabs_heading.0 }}
+        </h2>
+      {% endif %}
+
+      {% if content.field_tabs_intro.0 %}
+        <div class="tabs__intro">
+          {{ content.field_tabs_intro.0 }}
+        </div>
+      {% endif %}
+
+      {% if content.field_tab_items %}
+        <div class="tabs__items">
+          {{ content.field_tab_items }}
+        </div>
+      {% endif %}
+
+    {% endblock %}
+
+  </div>
+
+{% endblock paragraph %}

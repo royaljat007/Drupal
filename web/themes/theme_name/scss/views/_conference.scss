@@ -1,0 +1,333 @@
+.owl-carousel {
+  .conference {
+    padding: 14px;
+    &__content {
+      border: 1px solid $color-lightgray;
+      position: relative;
+      border-radius: 5px;
+      transition: all 0.2s ease;
+      overflow: hidden;
+      &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        .conference__img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        @media screen and (min-width: 992px) {
+          .conference__body {
+            transform: translateY(-45px);
+          }
+          .conference__bottom {
+            height: 48px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__img {
+      overflow: hidden;
+      img {
+        transition: all 0.2s ease;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        @media screen and (min-width: 992px) {
+          height: auto;
+        }
+      }
+    }
+
+    &__price {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-white;
+      border: 1px solid $color-white;
+      padding: 4px;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.478);
+      display: flex;
+      align-items: center;
+      &.price-free {
+        &::before {
+          display: none;
+        }
+      }
+      &::before {
+        content: "\F7EC";
+        font-family: "bootstrap-icons";
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    &__body {
+      padding: 12px 16px;
+      background-color: $color-white;
+      transition: all 0.2s ease;
+      @media screen and (min-width: 576px) {
+        padding: 16px 30px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      line-height: 1.4;
+      color: $color-gray;
+      margin-top: 0;
+      margin-bottom: 8px;
+      @media screen and (min-width: 576px) {
+        font-size: 18px;
+      }
+    }
+
+    &__tags {
+      font-size: 12px;
+      color: $color-silver;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 28px;
+      @media screen and (min-width: 576px) {
+        font-size: 14px;
+      }
+      &::before {
+        content: "";
+        background: url(../assets/icons/tags.svg);
+        left: 1px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media screen and (min-width: 576px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .field--name-field-conferences-tags {
+        .field__item {
+          display: inline;
+          &::after {
+            content: ",";
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &__date {
+      font-size: 12px;
+      color: $color-silver;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      padding-left: 28px;
+      @media screen and (min-width: 576px) {
+        font-size: 14px;
+      }
+      position: relative;
+      &::before {
+        content: "";
+        background: url(../assets/icons/date.svg);
+        left: 1px;
+        width: 14px;
+        height: 14px;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media screen and (min-width: 576px) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &__address {
+      font-size: 12px;
+      color: $color-silver;
+      line-height: 1.2;
+      padding-left: 26px;
+      @media screen and (min-width: 576px) {
+        font-size: 14px;
+      }
+      position: relative;
+      &::before {
+        content: "";
+        background: url(../assets/icons/location.svg);
+        left: 2px;
+        width: 10px;
+        height: 14px;
+        width: 12px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media screen and (min-width: 576px) {
+          width: 12px;
+          height: 16px;
+        }
+      }
+    }
+
+    &__bottom {
+      border-top: 1px solid $color-lightgray;
+      display: flex;
+      transition: all 0.2s ease;
+      @media screen and (min-width: 992px) {
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0px;
+        opacity: 0;
+      }
+      a {
+        color: #ced0d4;
+        background: $color-white;
+        border-right: 1px solid $color-lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          color: $color-blue;
+          background: $color-white;
+        }
+        &.wishlist-btn {
+          width: 20%;
+          font-size: 18px;
+          padding: 12px 10px 10px;
+          @media screen and (min-width: 992px) {
+            font-size: 23px;
+          }
+        }
+        &.cloud-btn {
+          width: 20%;
+          font-size: 20px;
+          padding: 8px 10px 8px;
+          @media screen and (min-width: 992px) {
+            font-size: 28px;
+          }
+        }
+        &.share-btn {
+          width: 20%;
+          font-size: 16px;
+          padding: 12px 10px 10px;
+          @media screen and (min-width: 992px) {
+            font-size: 21px;
+          }
+        }
+        &.detail-btn {
+          width: 40%;
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          border-right: 0;
+          color: $color-blue;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (min-width: 992px) {
+            font-size: 15px;
+          }
+          &:hover {
+            color: $color-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+.owl-theme {
+  .owl-nav {
+    margin-top: 0;
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      bottom: 56%;
+      transform: translatey(50%);
+      color: $color-gray;
+      span {
+        font-size: 60px;
+        width: 30px;
+        height: 40px;
+        display: block;
+        line-height: 0.5;
+      }
+      &:hover {
+        color: $color-blue;
+        background: transparent;
+      }
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+    .owl-prev {
+      left: -45px;
+    }
+    .owl-next {
+      right: -45px;
+    }
+  }
+  .owl-dots {
+    display: block;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+    .owl-dot {
+      transition: all 0.2s ease;
+      span {
+        transition: all 0.2s ease;
+        background: $color-white;
+        border: 2px solid $color-blue;
+        width: 18px;
+        height: 18px;
+      }
+      &.active,
+      &:hover {
+        span {
+          background: $color-blue;
+        }
+      }
+    }
+  }
+}
+
+// For Feature items
+.view-display-id-block_1 {
+  .conference__content {
+    &::before {
+      content: "\f586";
+      font-family: "bootstrap-icons";
+      position: absolute;
+      color: #fff;
+      left: 0;
+      top: -1px;
+      width: 40px;
+      height: 40px;
+      background: #39bc20;
+      clip-path: polygon(100% 0, 0% 100%, 0 0);
+      padding: 10px;
+      z-index: 1;
+    }
+  }
+}
